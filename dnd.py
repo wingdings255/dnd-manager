@@ -5,22 +5,22 @@ import json
 import random
 
 
-#Vars
-#global gamedata
-    #gamedata = dnd
+# Vars
+# global gamedata
+# gamedata = dnd
 
-#global itemdata
+# global itemdata
 #    itemdata = gamedata/itemdat/
 
-#global playersheet
+# global playersheet
 #    playersheet = gamedata/Playerdat/
 
 global player
 
 
 def init():
-    #BANNER HERE
-    #global player
+    # BANNER HERE
+    # global player
     os.system('clear')
     print("-----------------------")
     print("DnD Managment script")
@@ -29,7 +29,7 @@ def init():
     print("")
     print("Please choose a charicter sheet")
     print("-------------------------------")
-    #os.system('ls Playerdat')
+    # os.system('ls Playerdat')
     lst = []
     for x in lst:
         print(x)
@@ -69,7 +69,7 @@ def showskills():
     print("|--------------|")
     print("")
     # TODO: Add a checker to make sure they didnt over stack
-    #maybe use a key validation system to make sure people dont cheat
+    # maybe use a key validation system to make sure people dont cheat
     time.sleep(5)
     menu()
 
@@ -93,7 +93,7 @@ def roll():
     print("1.   20d")
     print("2.   6d")
     print("99.  Main Menu")
-    #make a roll animation
+    # make a roll animation
     ans = input()
     if ans == "1":
         x = random.randint(1, 20)
