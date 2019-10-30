@@ -5,22 +5,22 @@ import json
 import random
 
 
-#Vars
-#global gamedata
-    #gamedata = dnd
+# Vars
+# global gamedata
+# gamedata = dnd
 
-#global itemdata
+# global itemdata
 #    itemdata = gamedata/itemdat/
 
-#global playersheet
+# global playersheet
 #    playersheet = gamedata/Playerdat/
 
 global player
 
 
 def init():
-    #BANNER HERE
-    #global player
+    # BANNER HERE
+    # global player
     os.system('clear')
     print("-----------------------")
     print("DnD Managment script")
@@ -29,11 +29,11 @@ def init():
     print("")
     print("Please choose a charicter sheet")
     print("-------------------------------")
-    #os.system('ls Playerdat')
+    # os.system('ls Playerdat')
     lst = []
     for x in lst:
-        print (x)
-    ans=input()
+        print(x)
+    ans = input()
     if ans == 1:
         print(" ")
     time.sleep(3)
@@ -50,7 +50,7 @@ def menu():
     print("2.   Show Inventory")
     print("3.   Roll Dice")
     print("99.  Quit")
-    ans=input()
+    ans = input()
     if ans == "1":
         showskills()
     elif ans == "2":
@@ -61,26 +61,28 @@ def menu():
         os.system('clear')
         quit()
 
+
 def showskills():
-        os.system('clear')
-        print("|--------------|")
-        print("|Showing Skills|")
-        print("|--------------|")
-        print("")
-        #DEV NOTES
-        #Add a checker to make sure they didnt over stack
-        #maybe use a key validation system to make sure
-        time.sleep(5)
-        menu()
+    os.system('clear')
+    print("|--------------|")
+    print("|Showing Skills|")
+    print("|--------------|")
+    print("")
+    # TODO: Add a checker to make sure they didnt over stack
+    # maybe use a key validation system to make sure people dont cheat
+    time.sleep(5)
+    menu()
+
 
 def showinv():
-        os.system('clear')
-        print("|-----------------|")
-        print("|Showing Inventory|")
-        print("|-----------------|")
-        print("")
-        time.sleep(5)
-        menu()
+    os.system('clear')
+    print("|-----------------|")
+    print("|Showing Inventory|")
+    print("|-----------------|")
+    print("")
+    time.sleep(5)
+    menu()
+
 
 def roll():
     os.system('clear')
@@ -91,7 +93,7 @@ def roll():
     print("1.   20d")
     print("2.   6d")
     print("99.  Main Menu")
-    #make a roll animation
+    # make a roll animation
     ans = input()
     if ans == "1":
         x = random.randint(1, 20)
@@ -99,14 +101,15 @@ def roll():
         x = random.randint(1, 6)
     elif ans == "99":
         menu()
-    #TODO add a condidtion, if 20 then x = NAT 20 !!
+    # TODO: add a condidtion, if 20 then x = NAT 20 !!
     print("")
     print("|-------------------|")
-    print("|Your roll:" + str(x) )
+    print("|Your roll:" + str(x))
     print("|-------------------|")
     if x == "20":
         print("!! NAT 20 !!")
     time.sleep(2)
     roll()
+
 
 menu()
