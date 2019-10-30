@@ -19,12 +19,10 @@ global player
 
 
 def init():
-    # BANNER HERE
     # global player
     os.system('clear')
     print("-----------------------")
     print("DnD Managment script")
-
     print("-----------------------")
     print("")
     print("Please choose a charicter sheet")
@@ -38,6 +36,11 @@ def init():
         print(" ")
     time.sleep(3)
     menu()
+
+
+def load_data():
+    global playersheet
+    
 
 
 def menu():
