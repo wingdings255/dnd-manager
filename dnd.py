@@ -34,8 +34,8 @@ def init():
     print("")
     print("Please choose a charicter sheet")
     print("-------------------------------")
-    for x in range(len(playersheets)):
-        for y in playersheets:
+    for x in range(len(sheets)):
+        for y in sheets:
             print(str(x) + ".)   " + str(y))
             ans = input("Make your selection")
             if ans == x:
