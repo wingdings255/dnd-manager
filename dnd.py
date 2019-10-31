@@ -14,30 +14,39 @@ import random
 
 # global playersheet
 #    playersheet = gamedata/Playerdat/
+global items
+items = []
 
-global player
+global sheets
+sheets = ["wingdings", "test"]
+
+global playersheet
 
 
 def init():
-    # BANNER HERE
-    # global player
-    os.system('clear')
+    global sheets
+    global playersheet
+    global items
+    load_data()
     print("-----------------------")
     print("DnD Managment script")
-
     print("-----------------------")
     print("")
     print("Please choose a charicter sheet")
     print("-------------------------------")
-    # os.system('ls Playerdat')
-    lst = []
-    for x in lst:
-        print(x)
-    ans = input()
-    if ans == 1:
-        print(" ")
-    time.sleep(3)
+    for x in range(len(playersheets)):
+        for y in playersheets:
+            print(str(x) + ".)   " + str(y))
+            ans = input("Make your selection")
+            if ans == x:
+                playersheet = y
+    time.sleep(5)
     menu()
+
+
+def load_data():
+    global items
+    global playersheets
 
 
 def menu():
@@ -112,4 +121,4 @@ def roll():
     roll()
 
 
-menu()
+init()
