@@ -4,55 +4,56 @@ import time
 import json
 import random
 
+global os
+ostype = os.name
 
-# Vars
-# global gamedata
-# gamedata = dnd
+global clearcmd
+if ostype == "nt":
+    clearcmd = 'cls'
+elif ostype == "unix":
+    clearcmd == 'clear'
 
-# global itemdata
-#    itemdata = gamedata/itemdat/
+global gamedata
+gamedata = os.getcwd
 
-# global playersheet
-#    playersheet = gamedata/Playerdat/
 global items
 items = []
 
 global sheets
-sheets = ["wingdings", "test"]
+sheets = []
 
 global playersheet
 
 
 def init():
+    global clearcmd
     global sheets
     global playersheet
     global items
-    load_data()
+    os.system(clearcmd)
     print("-----------------------")
     print("DnD Managment script")
     print("-----------------------")
-    print("")
     print("Please choose a charicter sheet")
     print("-------------------------------")
+    sheets = os.listdir('playerdat')
     for x in range(len(sheets)):
         for y in sheets:
             print(str(x) + ".)   " + str(y))
-            ans = input("Make your selection")
+            ans = input("Make your selection:   ")
             if ans == x:
-                playersheet = y
+                playersheet = json.load(playerdat/, kwds)
+    time.sleep(1)
+    print("Sucessfully loaded " + playersheet + " as your playersheet")
     time.sleep(5)
+
     menu()
 
 
-def load_data():
-    global items
-    global playersheets
-
-
 def menu():
-    os.system('clear')
+    os.system(clearcmd)
     print("-----------------------")
-    print("DnD Managment script")
+    print("        Main Menu      ")
     print("-----------------------")
     print("Please make a selection")
     print("1.   Show skills")
