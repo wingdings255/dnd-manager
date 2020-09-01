@@ -1,7 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
+
 import os
 import time
-import json
+import xml
 import random
 
 global os
@@ -42,11 +43,10 @@ def init():
             print(str(x) + ".)   " + str(y))
             ans = input("Make your selection:   ")
             if ans == x:
-                playersheet = json.load(playerdat/, kwds)
-    time.sleep(1)
+                playersheet = open(ans,"w")
+                time.sleep(1)
     print("Sucessfully loaded " + playersheet + " as your playersheet")
     time.sleep(5)
-
     menu()
 
 
