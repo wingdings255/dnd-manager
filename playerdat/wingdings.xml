@@ -1,0 +1,19 @@
+<playersheet>
+    <name>wingdings</name>
+    <class>Palidin</class>
+    <skills>
+        <strength>5</strength>
+        <perseption>2</perseption>
+        <endurance>4</endurance>
+        <charisma>1</charisma>
+        <intelligence>5</intelligence>
+        <agility>3</agility>
+        <luck>1</luck>
+    </skills>
+        <inventory>
+            <gold>100</gold>
+            <primary>staff</primary>
+            <secondary>dagger</secondary>
+            <mele>broad_sword</mele>
+        </inventory>
+</playersheet>
