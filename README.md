@@ -1,2 +1,2 @@
 # dnd-manager
-My DnD Charicter manager script to teach myself python
+My DnD character manager script to teach myself python
