@@ -22,10 +22,10 @@ def init():
     # global player
     os.system('clear')
     print("-----------------------")
-    print("DnD Managment script")
+    print("DnD Management script")
     print("-----------------------")
     print("")
-    print("Please choose a charicter sheet")
+    print("Please choose a character sheet")
     print("-------------------------------")
     # os.system('ls Playerdat')
     lst = []
@@ -46,7 +46,7 @@ def load_data():
 def menu():
     os.system('clear')
     print("-----------------------")
-    print("DnD Managment script")
+    print("DnD Management script")
     print("-----------------------")
     print("Please make a selection")
     print("1.   Show skills")
@@ -71,8 +71,7 @@ def showskills():
     print("|Showing Skills|")
     print("|--------------|")
     print("")
-    # TODO: Add a checker to make sure they didnt over stack
-    # maybe use a key validation system to make sure people dont cheat
+    # TODO: Add a checker to make sure they didn't over stack
     time.sleep(5)
     menu()
 
@@ -104,7 +103,7 @@ def roll():
         x = random.randint(1, 6)
     elif ans == "99":
         menu()
-    # TODO: add a condidtion, if 20 then x = NAT 20 !!
+    # TODO: add a condition, if 20 then x = NAT 20 !!
     print("")
     print("|-------------------|")
     print("|Your roll:" + str(x))
