@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import os
 import time
-import json
 import random
 
 
@@ -40,7 +39,6 @@ def init():
 
 def load_data():
     global playersheet
-    
 
 
 def menu():
