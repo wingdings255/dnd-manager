@@ -2,7 +2,7 @@
 
 import os
 import time
-import xml
+# import xml
 import random
 
 global os
@@ -44,7 +44,7 @@ def init():
             print(str(x) + ".)   " + str(y))
             ans = input("Make your selection:   ")
             if ans == x:
-                playersheet = open(ans,"w")
+                playersheet = open(ans, "w")
                 time.sleep(1)
     print("Sucessfully loaded " + playersheet + " as your playersheet")
     time.sleep(5)
