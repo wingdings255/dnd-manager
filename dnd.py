@@ -2,7 +2,7 @@
 
 import os
 import time
-import xml
+# import xml
 import random
 
 global os
@@ -33,9 +33,10 @@ def init():
     global items
     os.system(clearcmd)
     print("-----------------------")
-    print("DnD Managment script")
+    print("DnD Management script")
     print("-----------------------")
-    print("Please choose a charicter sheet")
+    print("")
+    print("Please choose a character sheet")
     print("-------------------------------")
     sheets = os.listdir('playerdat')
     for x in range(len(sheets)):
@@ -43,7 +44,7 @@ def init():
             print(str(x) + ".)   " + str(y))
             ans = input("Make your selection:   ")
             if ans == x:
-                playersheet = open(ans,"w")
+                playersheet = open(ans, "w")
                 time.sleep(1)
     print("Sucessfully loaded " + playersheet + " as your playersheet")
     time.sleep(5)
@@ -78,8 +79,7 @@ def showskills():
     print("|Showing Skills|")
     print("|--------------|")
     print("")
-    # TODO: Add a checker to make sure they didnt over stack
-    # maybe use a key validation system to make sure people dont cheat
+    # TODO: Add a checker to make sure they didn't over stack
     time.sleep(5)
     menu()
 
@@ -111,7 +111,7 @@ def roll():
         x = random.randint(1, 6)
     elif ans == "99":
         menu()
-    # TODO: add a condidtion, if 20 then x = NAT 20 !!
+    # TODO: add a condition, if 20 then x = NAT 20 !!
     print("")
     print("|-------------------|")
     print("|Your roll:" + str(x))
