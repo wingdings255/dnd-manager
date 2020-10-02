@@ -1,50 +1,60 @@
 #!/usr/bin/env python3
+
 import os
 import time
+import xml
 import random
 
+global os
+ostype = os.name
 
-# Vars
-# global gamedata
-# gamedata = dnd
+global clearcmd
+if ostype == "nt":
+    clearcmd = 'cls'
+elif ostype == "posix":
+    clearcmd = 'clear'
 
-# global itemdata
-#    itemdata = gamedata/itemdat/
+global gamedata
+gamedata = os.getcwd
 
-# global playersheet
-#    playersheet = gamedata/Playerdat/
+global items
+items = []
 
-global player
+global sheets
+sheets = []
+
+global playersheet
 
 
 def init():
-    # global player
-    os.system('clear')
+    global clearcmd
+    global sheets
+    global playersheet
+    global items
+    os.system(clearcmd)
     print("-----------------------")
     print("DnD Management script")
     print("-----------------------")
     print("")
     print("Please choose a character sheet")
     print("-------------------------------")
-    # os.system('ls Playerdat')
-    lst = []
-    for x in lst:
-        print(x)
-    ans = input()
-    if ans == 1:
-        print(" ")
-    time.sleep(3)
+    sheets = os.listdir('playerdat')
+    for x in range(len(sheets)):
+        for y in sheets:
+            print(str(x) + ".)   " + str(y))
+            ans = input("Make your selection:   ")
+            if ans == x:
+                playersheet = open(ans,"w")
+                time.sleep(1)
+    print("Sucessfully loaded " + playersheet + " as your playersheet")
+    time.sleep(5)
     menu()
 
 
-def load_data():
-    global playersheet
-
-
 def menu():
-    os.system('clear')
+    os.system(clearcmd)
     print("-----------------------")
-    print("DnD Management script")
+    print("        Main Menu      ")
     print("-----------------------")
     print("Please make a selection")
     print("1.   Show skills")
@@ -112,4 +122,4 @@ def roll():
     roll()
 
 
-menu()
+init()
